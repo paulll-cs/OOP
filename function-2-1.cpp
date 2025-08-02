@@ -2,7 +2,6 @@
 
 int min_element(int array[], int n){
     int min = INT_MAX;
-    int i;
     if (n<1){
         return 0;
     }else{

@@ -9,7 +9,7 @@ void two_five_nine(int array[], int n){
         two_count = 0;
         five_count = 0;
         nine_count = 0;
-        std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count << "\n";
+        std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count << ";"<< "\n";
     }else{
         for (i=0;i<n;i++){
             switch(array[i]){
@@ -24,6 +24,6 @@ void two_five_nine(int array[], int n){
                 break;
             }
         }
-        std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count << "\n";
+        std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count <<";"<< "\n";
     }
 }

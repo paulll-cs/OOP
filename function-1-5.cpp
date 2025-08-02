@@ -1,4 +1,4 @@
-int count_even(int n) {
+int count_evens(int n) {
     if (n < 1) {
         return 0;
     }
