@@ -1,9 +1,9 @@
 #include <iostream>
 
 void two_five_nine(int array[], int n){
-    int two_count;
-    int five_count;
-    int nine_count;
+    int two_count=0;
+    int five_count=0;
+    int nine_count=0;
     int i;
     if (n<1){
         two_count = 0;
@@ -15,13 +15,10 @@ void two_five_nine(int array[], int n){
             switch(array[i]){
                 case 2: 
                 two_count++;
-                    break;
                 case 5:
                 five_count++;
-                    break;
                 case 9:
                 nine_count++;
-                    break;
             }
         }
         std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count << "\n";

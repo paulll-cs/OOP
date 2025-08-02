@@ -1,5 +1,5 @@
 double weighted_average(int array[], int n){
-    int unique_n[50]; // can only handle 50 unique elements because i am lazy
+    int unique_n[100]; // can only handle 100 unique elements 
     int unique_count=0;
     bool unique = false;
     double w_average = 0;
@@ -30,7 +30,7 @@ double weighted_average(int array[], int n){
                 local_count++;
             }
         }
-        w_average += unique_n[i]*local_count/n;
+        w_average += unique_n[i]*local_count/(double)n;
     }
     return w_average;
 }
