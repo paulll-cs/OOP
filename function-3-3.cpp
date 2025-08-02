@@ -19,6 +19,10 @@ double weighted_average(int array[], int n){
         }
     }
 
+    if (unique_count==1){
+        return unique_n[0];
+    }
+
     for (int i=0;i<unique_count;i++){
         local_count = 0.0;
         for (int j=0;j<n;j++){

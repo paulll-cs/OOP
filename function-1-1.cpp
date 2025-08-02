@@ -8,4 +8,5 @@ int array_sum(int array[], int n){
             sum += array[i];
         };
     }
+    return sum;
 }

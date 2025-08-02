@@ -13,6 +13,6 @@ bool is_descending(int array[], int n){
         }
         return true;
     }else{
-        return true;
+        return false;
     }
 }
