@@ -1,6 +1,6 @@
 #include <climits>
 
-int min_element(int array[], int n){
+int max_element(int array[], int n){
     int max = INT_MIN;
     if (n<1){
         return 0;

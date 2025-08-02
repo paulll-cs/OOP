@@ -15,10 +15,13 @@ void two_five_nine(int array[], int n){
             switch(array[i]){
                 case 2: 
                 two_count++;
+                break;
                 case 5:
                 five_count++;
+                break;
                 case 9:
                 nine_count++;
+                break;
             }
         }
         std::cout<< "2:" << two_count << ";" << "5:" << five_count << ";" << "9:" << nine_count << "\n";
