@@ -49,6 +49,7 @@
         "text_encoding": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "base10tobase2": "cpp"
+        "base10tobase2": "cpp",
+        "function2-3": "cpp"
     }
 }
