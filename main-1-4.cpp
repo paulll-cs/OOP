@@ -1,9 +1,8 @@
 // main_print_scaled.cpp
 #include <iostream>
 
-extern "C" {
-    void print_scaled(int array[3][3], int scale);
-}
+extern void print_scaled(int array[3][3], int scale);
+
 
 int main() {
     int scale = 2;

@@ -1,13 +1,16 @@
-int is_identity(int array[10][10]){
-    int array_sum = 0;
-    for (int i=0;i<10;i++){
-        for (int j=0;j<10;j++){
-            if (array[i][j] != 1){
+int is_identity(int array[10][10]) {
+    for (int i = 0; i < 10; i++) {
+        int row_sum = 0;
+        for (int j = 0; j < 10; j++) {
+            row_sum += array[i][j];
+            if (i == j && array[i][j] != 1) {
                 return 0;
             }
-            array_sum += array[i][j];
+            if (i != j && array[i][j] != 0) {
+                return 0;
+            }
         }
-        if (i+1 != array_sum){
+        if (row_sum != 1) {
             return 0;
         }
     }

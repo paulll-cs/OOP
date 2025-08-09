@@ -1,9 +1,8 @@
 // main_sum_diagonal.cpp
 #include <iostream>
 
-extern "C" {
-    int sum_diagonal(int array[4][4]);
-}
+extern int sum_diagonal(int array[4][4]);
+
 
 int main() {
     int array[4][4] = {

@@ -1,9 +1,8 @@
 // main_count_digits.cpp
 #include <iostream>
 
-extern "C" {
-    void count_digits(int array[4][4]);
-}
+extern void count_digits(int array[4][4]);
+
 
 int main() {
     int digit_array[4][4] = {

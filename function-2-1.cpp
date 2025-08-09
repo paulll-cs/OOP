@@ -5,11 +5,15 @@ std::string base_10_to_base_2(std::string n_base10,std::string n_base2 = ""){
 
     int n_base10i = std::stoi(n_base10);
 
+    if (n_base10i == 0 && n_base2.empty()) {
+        return "0"; 
+    }
+
     if (n_base10i == 1){
         return "1" + n_base2;
     }
 
-    int quotient = (n_base10i-(n_base10i%2))/2;
+    int quotient = n_base10i / 2;
     int remainder = n_base10i%2;
     std::string str_remainder;
 

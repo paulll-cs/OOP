@@ -1,9 +1,8 @@
 // main_binary_to_int.cpp
 #include <iostream>
 
-extern "C" {
-    int binary_to_int(int binary_digits[], int number_of_digits);
-}
+extern int binary_to_int(int binary_digits[], int number_of_digits);
+
 
 int main() {
     int binary_digits[] = {1, 0, 1, 0}; // Example binary number (10 in decimal)

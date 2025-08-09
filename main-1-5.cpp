@@ -1,9 +1,8 @@
 // main_print_summed.cpp
 #include <iostream>
 
-extern "C" {
-    void print_summed(int array1[3][3], int array2[3][3]);
-}
+extern void print_summed(int array1[3][3], int array2[3][3]);
+
 
 int main() {
     int array1[3][3] = {
