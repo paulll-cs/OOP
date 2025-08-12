@@ -7,7 +7,7 @@ void changeValue(double* number){
 
 void printArray(double* array, int size){
     for (int i =0;i<size;i++){
-        std::cout<<array[i]<<'\n';
+        std::cout<<array[i];
     }
 }
 
