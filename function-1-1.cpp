@@ -1,11 +1,21 @@
-int sum_diagonal(int array[4][4]){
-    double sum = 0.0;
-    for (int i=0;i<4;i++){
-        for(int j=0;j<4;j++){
-            if (i == j){
-                sum += array[i][j];
-            }
-        }
+#include <iostream>
+
+int* readNumbers(){
+    int length = 10;
+    int* array = new int[length];
+
+    for (int i = 0; i<length;i++){
+        std::cout<<"Enter an integer:\n";
+        std::cin>>array[i];
     }
-    return sum;
+    printNumbers(array,length);
+
+    return array;
+}
+
+
+void printNumbers(int* numbers,int length){
+    for (int i = 0; i<length; i++){
+        std::cout<<i+1<<" "<<numbers[i]<<"\n";
+    }
 }

@@ -1,30 +1,27 @@
 #include <iostream>
-#include <string>
+using namespace std;
 
-std::string base_10_to_base_2(std::string n_base10,std::string n_base2 = ""){
+void hexDigits(int* arr, int length) {
+    for (int i = 0; i < length; i++) {
+        int num = arr[i];
+        char hexChar;
 
-    int n_base10i = std::stoi(n_base10);
+        switch (num) {
+            case 10: hexChar = 'A'; 
+                break;
+            case 11: hexChar = 'B'; 
+                break;
+            case 12: hexChar = 'C'; 
+                break;
+            case 13: hexChar = 'D'; 
+                break;
+            case 14: hexChar = 'E'; 
+                break;
+            case 15: hexChar = 'F'; 
+                break;
+            default: hexChar = '0' + num; 
+        }
 
-    if (n_base10i == 0 && n_base2.empty()) {
-        return "0"; 
+        cout << i << " " << num << " " << hexChar << "\n";
     }
-
-    if (n_base10i == 1){
-        return "1" + n_base2;
-    }
-
-    int quotient = n_base10i / 2;
-    int remainder = n_base10i%2;
-    std::string str_remainder;
-
-    if (remainder ==0){
-        str_remainder = "0";
-    }else{
-        str_remainder = "1";
-    }
-    return base_10_to_base_2(std::to_string(quotient),str_remainder+n_base2);
-}
-
-void print_binary_str(std::string decimal_number){
-    std::cout<<base_10_to_base_2(decimal_number);
 }

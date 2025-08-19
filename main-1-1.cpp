@@ -1,19 +1,12 @@
-// main_sum_diagonal.cpp
-#include <iostream>
-
-extern int sum_diagonal(int array[4][4]);
-
+extern int* readNumbers();
+extern void printNumbers(int* array, int length);
 
 int main() {
-    int array[4][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-        {13, 14, 15, 16}
-    };
+    int length = 10;
 
-    int diagonal_sum = sum_diagonal(array);
-    std::cout << "Sum of diagonal: " << diagonal_sum << std::endl;
+    int* nums = readNumbers();
+    printNumbers(nums, length);
+    delete[] nums;
 
     return 0;
 }
