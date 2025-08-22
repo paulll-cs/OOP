@@ -1,12 +1,19 @@
-extern int* readNumbers();
-extern void printNumbers(int* array, int length);
+#include <iostream>
+#include "Person.h"
+
+Person* createPersonArray(int n);
 
 int main() {
-    int length = 10;
+    int n = 5;
+    Person* people = createPersonArray(n);
 
-    int* nums = readNumbers();
-    printNumbers(nums, length);
-    delete[] nums;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Person " << i + 1 << ": "
+                  << people[i].name << ", "
+                  << people[i].age << std::endl;
+    }
 
+    // free the allocated memory
+    delete[] people;
     return 0;
 }

@@ -1,21 +1,10 @@
-#include <iostream>
+#include "Person.h"
 
-int* readNumbers(){
-    int length = 10;
-    int* array = new int[length];
-
-    for (int i = 0; i<length;i++){
-        std::cout<<"Enter an integer:\n";
-        std::cin>>array[i];
+Person* createPersonArray(int n) {
+    Person* arr = new Person[n];
+    for (int i = 0; i < n; i++) {
+        arr[i].name = "John Doe";
+        arr[i].age = 0;
     }
-    printNumbers(array,length);
-
-    return array;
-}
-
-
-void printNumbers(int* numbers,int length){
-    for (int i = 0; i<length; i++){
-        std::cout<<i+1<<" "<<numbers[i]<<"\n";
-    }
+    return arr;
 }
