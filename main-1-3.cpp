@@ -2,7 +2,7 @@
 #include "Person.h"
 
 PersonList createPersonList(int n);
-PersonList deepCopyPersonList(const PersonList& pl);
+PersonList deepCopyPersonList(PersonList pl);
 
 int main() {
     PersonList original = createPersonList(3);

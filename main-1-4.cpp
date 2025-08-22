@@ -2,7 +2,7 @@
 #include "Person.h"
 
 PersonList createPersonList(int n);
-PersonList shallowCopyPersonList(const PersonList& pl);
+PersonList shallowCopyPersonList(PersonList pl);
 
 int main() {
     PersonList original = createPersonList(3);

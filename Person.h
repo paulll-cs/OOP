@@ -14,4 +14,7 @@ struct PersonList {
     int numPeople;
 };
 
+PersonList createPersonList(int n);
+PersonList deepCopyPersonList(const PersonList& pl);
+
 #endif

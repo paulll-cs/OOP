@@ -14,7 +14,7 @@ PersonList createPersonList(int n){
 
 }
 
-PersonList shallowCopyPersonList(const PersonList& pl){
+PersonList shallowCopyPersonList(PersonList pl){
     PersonList copy;
     copy.numPeople = pl.numPeople;
     copy.people = pl.people;
