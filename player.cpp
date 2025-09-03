@@ -37,42 +37,6 @@ public:
     bool isAlive() const { return health > 0; }
 };
 
-class Wizard : public Player {
-private:
-    int mana;
-
-public:
-    Wizard(string name, int health, int damage, int mana)
-        : Player(name, health, damage), mana(mana) {}
-
-    void castSpell(Player* opponent) {
-        cout << name << " casts a spell on " << opponent->getName()
-             << " for " << mana << " damage!" << endl;
-        opponent->takeDamage(mana);
-    }
-
-    int getMana() const { return mana; }
-    void setMana(int m) { mana = m; }
-};
-
-class Warrior : public Player {
-private:
-    string weapon;
-
-public:
-    Warrior(string name, int health, int damage, string weapon)
-        : Player(name, health, damage), weapon(weapon) {}
-
-    void swingWeapon(Player* opponent) {
-        cout << name << " swings their " << weapon
-             << " at " << opponent->getName()
-             << " for " << damage << " damage!" << endl;
-        opponent->takeDamage(damage);
-    }
-
-    string getWeapon() const { return weapon; }
-    void setWeapon(string w) { weapon = w; }
-};
 
 
 int main() {
