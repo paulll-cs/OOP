@@ -31,30 +31,5 @@ public:
     bool isAlive() const;
 };
 
-class Wizard : public Player {
-private:
-    int mana;
-
-public:
-    Wizard(string name, int health, int damage, int mana);
-
-    void castSpell(Player* opponent);
-
-    int getMana() const;
-    void setMana(int m);
-};
-
-class Warrior : public Player {
-private:
-    string weapon;
-
-public:
-    Warrior(string name, int health, int damage, string weapon);
-
-    void swingWeapon(Player* opponent);
-
-    string getWeapon() const;
-    void setWeapon(string w);
-};
 
 #endif
