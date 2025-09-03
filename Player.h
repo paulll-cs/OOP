@@ -4,7 +4,6 @@
 #include <string>
 using namespace std;
 
-// Base class
 class Player {
 protected:
     string name;
@@ -12,16 +11,12 @@ protected:
     int damage;
 
 public:
-    // Constructor
     Player(string name, int health, int damage);
 
-    // Attack
     void attack(Player* opponent);
 
-    // Take damage
     void takeDamage(int dmg);
 
-    // Getters & Setters
     string getName() const;
     void setName(string n);
 
@@ -36,7 +31,6 @@ public:
     bool isAlive() const;
 };
 
-// Wizard subclass
 class Wizard : public Player {
 private:
     int mana;
@@ -46,12 +40,10 @@ public:
 
     void castSpell(Player* opponent);
 
-    // Getter & Setter
     int getMana() const;
     void setMana(int m);
 };
 
-// Warrior subclass
 class Warrior : public Player {
 private:
     string weapon;
@@ -61,7 +53,6 @@ public:
 
     void swingWeapon(Player* opponent);
 
-    // Getter & Setter
     string getWeapon() const;
     void setWeapon(string w);
 };
