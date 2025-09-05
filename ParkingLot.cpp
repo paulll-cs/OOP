@@ -24,7 +24,7 @@ void ParkingLot::parkVehicle(std::unique_ptr<Vehicle> vehicle){
 
 
 void ParkingLot::unparkVehicle(int id){
-    bool found;
+    bool found = false;
 
     for (int i = 0; i<current_capacity;i++){
         if (id == current_vehicles[i]->getID()){
@@ -39,7 +39,7 @@ void ParkingLot::unparkVehicle(int id){
 };
 
 int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
-    int overstay_count;
+    int overstay_count = 0;
     for (int i = 0; i<current_capacity;i++){
         if (current_vehicles[i]->getParkingDuration()>maxParkingDuration){
             overstay_count+= 1;
