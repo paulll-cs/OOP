@@ -50,6 +50,13 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "base10tobase2": "cpp",
-        "function2-3": "cpp"
+        "function2-3": "cpp",
+        "chrono": "cpp",
+        "ratio": "cpp",
+        "iomanip": "cpp",
+        "semaphore": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
