@@ -15,7 +15,7 @@ class ParkingLot{
         ~ParkingLot();
 
         int getCount();
-        void parkVehicle(std::unique_ptr<Vehicle> vehicle);
+        void parkVehicle(Vehicle* vehicle);
         void unparkVehicle(int id);
         int countOverstayingVehicles(int maxParkingDuration);
 

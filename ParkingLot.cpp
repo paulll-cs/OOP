@@ -13,12 +13,12 @@ int ParkingLot::getCount(){
     return current_capacity;
 }
 
-void ParkingLot::parkVehicle(std::unique_ptr<Vehicle> vehicle){
+void ParkingLot::parkVehicle(Vehicle* vehicle){
     if (current_capacity + 1 > max_capacity_){
         std::cout<< "The lot is full";
     }else{
         current_capacity += 1;
-        current_vehicles.push_back(std::move(vehicle));
+        current_vehicles.push_back(std::unique_ptr<Vehicle>(vehicle));
     }
 };
 
