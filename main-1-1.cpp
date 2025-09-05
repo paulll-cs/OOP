@@ -23,11 +23,11 @@ int main() {
         std::cin >> id;
 
         if (type == "Car") {
-            parkingLot.push_back(std::make_unique<Car>(id));
+            parkingLot.push_back(std::unique_ptr<Car>(new Car(id)));
         } else if (type == "Bus") {
-            parkingLot.push_back(std::make_unique<Bus>(id));
+            parkingLot.push_back(std::unique_ptr<Bus>(new Bus(id)));
         } else if (type == "Motorbike") {
-            parkingLot.push_back(std::make_unique<Motorbike>(id));
+            parkingLot.push_back(std::unique_ptr<Motorbike>(new Motorbike(id)));
         } else {
             std::cout << "Invalid type. Skipping.\n";
         }

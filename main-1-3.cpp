@@ -20,21 +20,21 @@ int main() {
 
     // Park Cars
     for (int i = 0; i < carsToPark; i++) {
-        std::unique_ptr<Vehicle> car = std::make_unique<Car>(vehicleID++);
+        std::unique_ptr<Vehicle> car = std::unique_ptr<Car>(new Car(vehicleID++));
         lot.parkVehicle(std::move(car));
         std::cout << "Parked Car with ID " << vehicleID-1 << "\n";
     }
 
     // Park Buses
     for (int i = 0; i < busesToPark; i++) {
-        std::unique_ptr<Vehicle> bus = std::make_unique<Bus>(vehicleID++);
+        std::unique_ptr<Vehicle> bus = std::unique_ptr<Bus>(new Bus(vehicleID++));
         lot.parkVehicle(std::move(bus));
         std::cout << "Parked Bus with ID " << vehicleID-1 << "\n";
     }
 
     // Park Motorbikes
     for (int i = 0; i < bikesToPark; i++) {
-        std::unique_ptr<Vehicle> bike = std::make_unique<Motorbike>(vehicleID++);
+        std::unique_ptr<Vehicle> bike = std::unique_ptr<Motorbike>(new Motorbike(vehicleID++));
         lot.parkVehicle(std::move(bike));
         std::cout << "Parked Motorbike with ID " << vehicleID-1 << "\n";
     }
