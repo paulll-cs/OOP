@@ -16,5 +16,22 @@ class Vehicle {
         virtual int getParkingDuration() const;
 };
 
+class Car : public Vehicle {
+    public:
+        Car(int id);
+        int getParkingDuration() const override;
+};
+
+class Bus : public Vehicle {
+    public:
+        Bus(int id);
+        int getParkingDuration() const override;
+};
+
+class Motorbike : public Vehicle {
+    public:
+        Motorbike(int id);
+        int getParkingDuration() const override;
+};
 
 #endif

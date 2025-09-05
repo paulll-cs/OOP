@@ -15,3 +15,17 @@ int Vehicle::getParkingDuration() const {
     std::time_t now = std::time(nullptr);
     return static_cast<int>(std::difftime(now, timeOfEntry));
 }
+
+
+int Bus::getParkingDuration() const {
+    return Vehicle::getParkingDuration()*0.75;
+}
+
+
+int Car::getParkingDuration() const{
+    return Vehicle::getParkingDuration()*0.9;
+}
+
+int Motorbike::getParkingDuration() const {
+    return Motorbike::getParkingDuration()*0.85;
+}
