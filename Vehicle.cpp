@@ -17,15 +17,3 @@ int Vehicle::getParkingDuration() const {
 }
 
 
-int Bus::getParkingDuration() const {
-    return Vehicle::getParkingDuration()*0.75;
-}
-
-
-int Car::getParkingDuration() const{
-    return Vehicle::getParkingDuration()*0.9;
-}
-
-int Motorbike::getParkingDuration() const {
-    return Motorbike::getParkingDuration()*0.85;
-}
