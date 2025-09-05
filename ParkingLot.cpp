@@ -29,7 +29,7 @@ void ParkingLot::unparkVehicle(int id){
     for (int i = 0; i<current_capacity;i++){
         if (id == current_vehicles[i]->getID()){
             current_vehicles.erase(current_vehicles.begin() + i);
-            found == true;
+            found = true;
             break;
         }
         if(!found){

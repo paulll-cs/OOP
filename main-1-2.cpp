@@ -22,11 +22,11 @@ int main() {
         std::unique_ptr<Vehicle> vehicle;
 
         if (type == "Car") {
-            vehicle = std::unique_ptr<Car>(new Car(id))
+            vehicle = std::unique_ptr<Car>(new Car(id));
         } else if (type == "Bus") {
-            vehicle = std::unique_ptr<Bus>(new Bus(id))
+            vehicle = std::unique_ptr<Bus>(new Bus(id));
         } else if (type == "Motorbike") {
-            vehicle = std::unique_ptr<Motorbike>(new Motorbike(id))
+            vehicle = std::unique_ptr<Motorbike>(new Motorbike(id));
         } else {
             std::cout << "Invalid type. Try again.\n";
             continue; 
