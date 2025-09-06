@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-ParkingLot::ParkingLot(int max_capacity): max_capacity_(max_capacity){};
+ParkingLot::ParkingLot(int max_capacity): max_capacity_(max_capacity), current_capacity(0){};
 
 ParkingLot::~ParkingLot() = default;
 
@@ -32,9 +32,9 @@ void ParkingLot::unparkVehicle(int id){
             found = true;
             break;
         }
-        if(!found){
-            std::cout<<"Vehicle not in lot";
-        }
+    }
+    if(!found){
+        std::cout<<"Vehicle not in lot";
     }
 };
 

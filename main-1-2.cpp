@@ -32,7 +32,7 @@ int main() {
             continue; 
         }
 
-        lot.parkVehicle(std::move(vehicle));
+        lot.parkVehicle(vehicle.release());
     }
 
     std::cout << "\nParking lot is full.\n";
